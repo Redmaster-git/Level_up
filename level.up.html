@@ -1,0 +1,206 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEVEL UP - Become AI Power User</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  color:#0f172a;
+}
+
+/* HEADER */
+header{
+  padding:16px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:white;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  padding:70px 8%;
+  align-items:center;
+  color:white;
+}
+
+.hero-text h1{
+  font-size:38px;
+  line-height:1.2;
+}
+
+.hero-text span{
+  color:#facc15;
+}
+
+.hero-text p{
+  margin:15px 0;
+  opacity:0.95;
+}
+
+/* PRICE */
+.price-box{
+  margin:18px 0;
+}
+.old-price{
+  text-decoration:line-through;
+  opacity:0.7;
+}
+.new-price{
+  color:#22c55e;
+  font-size:30px;
+  font-weight:700;
+}
+
+/* BUTTON */
+.btn{
+  padding:12px 22px;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  margin:6px;
+}
+.btn-blue{background:#4f46e5;color:white;}
+.btn-green{background:#22c55e;color:white;}
+.btn:hover{opacity:0.9;}
+
+/* CARD */
+.ebook-card{
+  background:white;
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* SECTION */
+section{
+  padding:60px 8%;
+  background:#f8fafc;
+}
+section h2{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.feature{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+}
+
+/* BONUS */
+.bonus{
+  background:#fff7ed;
+  padding:20px;
+  border-radius:12px;
+  margin-top:30px;
+}
+
+/* PAYMENT */
+.payment-box{
+  margin-top:40px;
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>LEVEL UP 🚀</h2>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Become an <span>AI Power User</span> in 7 Days 🚀</h1>
+    <p>Stop using AI like a beginner. Learn powerful prompts, frameworks, and real-world systems.</p>
+
+    <div class="price-box">
+      <span class="old-price">₹499</span><br>
+      <span class="new-price">₹199 🔥</span>
+      <p>Limited Offer for Early Users</p>
+    </div>
+
+    <button class="btn btn-blue" onclick="openUPI()">Buy Now ₹199 💸</button>
+   <button class="btn btn-green" onclick="openForm()">I Have Paid ✅</button>
+
+<p style="margin-top:10px; font-size:14px; background:#ffffff20; padding:8px; border-radius:6px;">
+  ⏳ Delivery Time: <b>Within 24 Hours</b> <br>
+  📩 Sent directly to your Email Inbox
+</p>
+  </div>
+
+  <div class="ebook-card">
+    <img src="https://i.supaimg.com/7ef27e5b-2dce-4868-a681-c72a6d923c4a/689c2938-d9f0-4e30-89cf-986cc4723e2a.png" width="220">
+  </div>
+</div>
+
+<section>
+  <h2>🚀 What You Will Learn</h2>
+
+  <div class="features">
+    <div class="feature">💡 Advanced Prompt Engineering</div>
+    <div class="feature">🧠 AI Thinking Frameworks</div>
+    <div class="feature">📊 Real Business Use Cases</div>
+    <div class="feature">🚀 Productivity Hacks</div>
+  </div>
+
+
+
+  <div class="payment-box">
+    <h2>💳 Pay via UPI</h2>
+    <img src="https://i.supaimg.com/7ef27e5b-2dce-4868-a681-c72a6d923c4a/ea034acc-c805-4e7e-b052-08c7f2a7d49a.png" width="180">
+    <p><b>UPI ID:</b> sudhirbhagat53@oksbi</p>
+    <button onclick="copyUPI()">Copy UPI ID</button>
+  </div>
+</section>
+
+<footer>
+  © 2026 LEVEL UP | AI Skill System
+</footer>
+
+<script>
+function openUPI(){
+  window.location.href="upi://pay?pa=sudhirbhagat53@oksbi&pn=Sudhir%20Bhagat";
+}
+
+function openForm(){
+  window.location.href="https://docs.google.com/forms/d/e/1FAIpQLSfI5QzgFcRLI1GI3W_17P28dGJA120zSq3mO6ycQN89JVuuYA/viewform";
+}
+
+function copyUPI(){
+  navigator.clipboard.writeText("sudhirbhagat53@oksbi");
+  alert("UPI ID copied!");
+}
+</script>
+
+</body>
+</html>
